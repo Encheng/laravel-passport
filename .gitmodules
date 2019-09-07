@@ -1,0 +1,3 @@
+[submodule "laravel-coding-style"]
+	path = laravel-coding-style
+	url = cwgroup@vs-ssh.visualstudio.com:v3/cwgroup/digital-products/laravel-coding-style
