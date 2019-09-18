@@ -1,10 +1,12 @@
-##### 安裝Passport
+## 實作Passport
+
+### 安裝Passport
 
 composer require laravel/passport
 
 
 
-##### 設定ServiceProvider
+### 設定ServiceProvider
 
 AuthServiceProvider
 
@@ -16,13 +18,11 @@ PassportServiceProvider
 
 
 
-##### 設定config/auth.php
+### 設定config/auth.php
 
 - api下guards的driver要改成passport
 
-`
-
- 'guards' => [
+`    'guards' => [
 
 ​        'web' => [
 
@@ -42,15 +42,11 @@ PassportServiceProvider
 
 ​        ],
 
-​    ],
-
-`
+​    ],`
 
 - providers可以設定要操作的users資料表model
 
-`
-
-'providers' => [
+`'providers' => [
 
 ​        'users' => [
 
@@ -58,13 +54,11 @@ PassportServiceProvider
 
 ​            'model' => App\Models\Entities\Leadercampus\User::class,
 
-​        ],
-
-`
+​        ],`
 
 
 
-##### Migrate
+### Migrate
 
 Passport有自己的資料庫目錄，所以我們要下指令進行遷移
 
@@ -72,7 +66,7 @@ php artisan migrate
 
 
 
-##### 使用passport:install指令
+### 使用passport:install指令
 
 這個指令會建立用來產生安全 Access Token 的加密金鑰
 
@@ -82,8 +76,9 @@ php artisan passport:install
 
 
 
-##### 產生要連線的client
+### 產生要連線的client
 
 php artisan passport:client --password
 
+------
 
