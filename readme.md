@@ -22,39 +22,43 @@ PassportServiceProvider
 
 - api下guards的driver要改成passport
 
-`    'guards' => [
+  ​    'guards' => [
 
-​        'web' => [
+  ​        'web' => [
 
-​            'driver' => 'session',
+  ​            'driver' => 'session',
 
-​            'provider' => 'users',
+  ​            'provider' => 'users',
 
-​        ],
+  ​        ],
 
 
 
-​        'api' => [
+  ​        'api' => [
 
-​            'driver' => 'passport',
+  ​            'driver' => 'passport',
 
-​            'provider' => 'users',
+  ​            'provider' => 'users',
 
-​        ],
+  ​        ],
 
-​    ],`
+  ​    ],
+
+
 
 - providers可以設定要操作的users資料表model
 
-`'providers' => [
+  'providers' => [
 
-​        'users' => [
+  ​        'users' => [
 
-​            'driver' => 'eloquent',
+  ​            'driver' => 'eloquent',
 
-​            'model' => App\Models\Entities\Leadercampus\User::class,
+  ​            'model' => App\Models\Entities\Leadercampus\User::class,
 
-​        ],`
+  ​        ],
+
+  ​    ],
 
 
 
