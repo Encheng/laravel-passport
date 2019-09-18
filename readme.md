@@ -42,14 +42,14 @@ PassportServiceProvider
 
 - providers可以設定要操作的users資料表model
 
-  ```php
-  'providers' => [
-    'users' => [
-      'driver' => 'eloquent',
-      'model' => App\Models\Entities\Leadercampus\User::class,
-    ],
-  ],
-  ```
+```php
+'providers' => [
+'users' => [
+    'driver' => 'eloquent',
+    'model' => App\Models\Entities\Leadercampus\User::class,
+],
+],
+```
 
 
 
