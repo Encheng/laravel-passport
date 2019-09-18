@@ -24,17 +24,14 @@ PassportServiceProvider
 
 ```php
 'guards' => [
-
-  'web' => [
+    'web' => [
     'driver' => 'session',
     'provider' => 'users',
-  ],
-
-  'api' => [
+    ],
+    'api' => [
     'driver' => 'passport',
     'provider' => 'users',
-  ],
-
+    ],
 ],
 ```
 
@@ -44,10 +41,10 @@ PassportServiceProvider
 
 ```php
 'providers' => [
-'users' => [
-    'driver' => 'eloquent',
-    'model' => App\Models\Entities\Leadercampus\User::class,
-],
+    'users' => [
+        'driver' => 'eloquent',
+        'model' => App\Models\Entities\Leadercampus\User::class,
+    ],
 ],
 ```
 
