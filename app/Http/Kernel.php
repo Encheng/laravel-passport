@@ -60,6 +60,15 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        'scopes' => \Laravel\Passport\Http\Middleware\CheckScopes::class,
+        'scope' => \Laravel\Passport\Http\Middleware\CheckForAnyScope::class,
+        'client' => \Laravel\Passport\Http\Middleware\CheckClientCredentials::class,
+        'web-client-token-check' => \App\Http\Middleware\WebClientTokenCheck::class,
+        'app-user-token-check' => \App\Http\Middleware\AppUserTokenCheck::class,
+        'app-refresh-token-check' => \App\Http\Middleware\AppRefreshTokenCheck::class,
+        'app-facebook-token-check' => \App\Http\Middleware\AppFacebookTokenCheck::class,
+        'app-uuid-token-check' => \App\Http\Middleware\AppUuidTokenCheck::class,
+        'app-token-match-user-check' => \App\Http\Middleware\AppTokenMatchUserCheck::class,
     ];
 
     /**
